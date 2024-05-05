@@ -1,0 +1,7 @@
+﻿  main.c
+C:\workspaces\introduction_programming\src\2048\main.c(266,10): warning C4477: 'scanf_s' : 서식 문자열 '%19s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+  C:\workspaces\introduction_programming\src\2048\main.c(266,10):
+  이 인수는 버퍼 크기로 사용됩니다.
+  
+C:\workspaces\introduction_programming\src\2048\main.c(305,8): warning C4013: 'time'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  2048.vcxproj -> C:\workspaces\introduction_programming\src\x64\Debug\2048.exe
