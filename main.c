@@ -30,7 +30,7 @@ int comparetable() {
 	return 1;
 }
 
-int random24() {				// ·£´ı ¼ıÀÚ »ı¼º ÇÔ¼ö (2, 4)
+int random24() {				// ëœë¤ ìˆ«ì ìƒì„± í•¨ìˆ˜ (2, 4)
 	int random = 0;
 	random = rand() % 8;
 	
@@ -58,7 +58,7 @@ int randomwhere() {
 void wControl() {
 	int merge[4][4] = { 0 };
 
-	// À§·Î ¿Ã¸²
+	// ìœ„ë¡œ ì˜¬ë¦¼
 	for (int i = 1; i < 4; i++) {
 		for (int j = 0; j < 4; j++) {
 			if (table[i][j] == 0) continue;
@@ -73,7 +73,7 @@ void wControl() {
 		}
 	}
 
-	// ÇÕÄ§
+	// í•©ì¹¨
 	for (int i = 1; i < 4; i++) {
 		for (int j = 0; j < 4; j++) {
 			if (table[i][j] != 0 && table[i - 1][j] == table[i][j] && merge[i - 1][j] == 0 && merge[i][j] == 0) {
@@ -85,7 +85,7 @@ void wControl() {
 		}
 	}
 
-	// ´Ù½Ã À§·Î ¿Ã¸²
+	// ë‹¤ì‹œ ìœ„ë¡œ ì˜¬ë¦¼
 	for (int i = 1; i < 4; i++) {
 		for (int j = 0; j < 4; j++) {
 			if (table[i][j] == 0) continue;
@@ -104,7 +104,7 @@ void wControl() {
 void aControl() {
 	int merge[4][4] = { 0 };
 
-	// ¿ŞÂÊÀ¸·Î ¹ĞÀ½
+	// ì™¼ìª½ìœ¼ë¡œ ë°€ìŒ
 	for (int i = 0; i < 4; i++) {
 		for (int j = 1; j < 4; j++) {
 			if (table[i][j] == 0) continue;
@@ -119,7 +119,7 @@ void aControl() {
 		}
 	}
 
-	// ÇÕÄ§
+	// í•©ì¹¨
 	for (int i = 0; i < 4; i++) {
 		for (int j = 1; j < 4; j++) {
 			if (table[i][j] != 0 && table[i][j - 1] == table[i][j] && merge[i][j - 1] == 0 && merge[i][j] == 0) {
@@ -131,7 +131,7 @@ void aControl() {
 		}
 	}
 
-	// ´Ù½Ã ¿ŞÂÊÀ¸·Î ¹ĞÀ½
+	// ë‹¤ì‹œ ì™¼ìª½ìœ¼ë¡œ ë°€ìŒ
 	for (int i = 0; i < 4; i++) {
 		for (int j = 1; j < 4; j++) {
 			if (table[i][j] == 0) continue;
@@ -150,7 +150,7 @@ void aControl() {
 void sControl() {
 	int merge[4][4] = { 0 };
 
-	// ¾Æ·¡·Î ³»¸²
+	// ì•„ë˜ë¡œ ë‚´ë¦¼
 	for (int i = 2; i >= 0; i--) {
 		for (int j = 0; j < 4; j++) {
 			if (table[i][j] == 0) continue;
@@ -165,7 +165,7 @@ void sControl() {
 		}
 	}
 
-	// ÇÕÄ§
+	// í•©ì¹¨
 	for (int i = 2; i >= 0; i--) {
 		for (int j = 0; j < 4; j++) {
 			if (table[i][j] != 0 && table[i + 1][j] == table[i][j] && merge[i + 1][j] == 0 && merge[i][j] == 0) {
@@ -177,7 +177,7 @@ void sControl() {
 		}
 	}
 
-	// ´Ù½Ã ¾Æ·¡·Î ³»¸²
+	// ë‹¤ì‹œ ì•„ë˜ë¡œ ë‚´ë¦¼
 	for (int i = 2; i >= 0; i--) {
 		for (int j = 0; j < 4; j++) {
 			if (table[i][j] == 0) continue;
@@ -196,7 +196,7 @@ void sControl() {
 void dControl() {
 	int merge[4][4] = { 0 };
 
-	// ¿À¸¥ÂÊÀ¸·Î ¹ĞÀ½
+	// ì˜¤ë¥¸ìª½ìœ¼ë¡œ ë°€ìŒ
 	for (int i = 0; i < 4; i++) {
 		for (int j = 2; j >= 0; j--) {
 			if (table[i][j] == 0) continue;
@@ -211,7 +211,7 @@ void dControl() {
 		}
 	}
 
-	// ÇÕÄ§
+	// í•©ì¹¨
 	for (int i = 0; i < 4; i++) {
 		for (int j = 2; j >= 0; j--) {
 			if (table[i][j] != 0 && table[i][j + 1] == table[i][j] && merge[i][j + 1] == 0 && merge[i][j] == 0) {
@@ -223,7 +223,7 @@ void dControl() {
 		}
 	}
 
-	// ´Ù½Ã ¿À¸¥ÂÊÀ¸·Î ¹ĞÀ½
+	// ë‹¤ì‹œ ì˜¤ë¥¸ìª½ìœ¼ë¡œ ë°€ìŒ
 	for (int i = 0; i < 4; i++) {
 		for (int j = 2; j >= 0; j--) {
 			if (table[i][j] == 0) continue;
@@ -313,7 +313,7 @@ int main() {
 
 	while (1) {
 
-		for (int i = 0; i < 4; i++) {		// table¿¡ ºó °ø°£ ÀÖÀ¸¸é blank Ç¥¿¡ °ª 1 ÀúÀå
+		for (int i = 0; i < 4; i++) {		// tableì— ë¹ˆ ê³µê°„ ìˆìœ¼ë©´ blank í‘œì— ê°’ 1 ì €ì¥
 			for (int j = 0; j < 4; j++) {
 				if (table[i][j] == 0) {
 					blank[4 * i + j] = 1;
@@ -324,15 +324,13 @@ int main() {
 			}
 		}
 
-		int temp = randomwhere();		// ºó Ä­ À§Ä¡ ·£´ıÀ¸·Î È£Ãâ
-		table[temp / 4][temp % 4] = random24();		// ·£´ıÀ¸·Î È£ÃâÇÑ ºó Ä­¿¡ 2 ¶Ç´Â 4 ÀÔ·Â
-		temp = randomwhere();
-		table[temp / 4][temp % 4] = random24();
-
+		int temp = randomwhere();		// ë¹ˆ ì¹¸ ìœ„ì¹˜ ëœë¤ìœ¼ë¡œ í˜¸ì¶œ
+		table[temp / 4][temp % 4] = random24();		// ëœë¤ìœ¼ë¡œ í˜¸ì¶œí•œ ë¹ˆ ì¹¸ì— 2 ë˜ëŠ” 4 ì…ë ¥
+		
 		printf("\n-----------------------\n");
 		printf("score: %d\n\n", score);
 
-		for (int i = 0; i < 4; i++) {		// table Ãâ·Â
+		for (int i = 0; i < 4; i++) {		// table ì¶œë ¥
 			for (int j = 0; j < 4; j++) {
 				if (table[i][j] == 0) {
 					printf("%4s ", "-");
@@ -344,13 +342,13 @@ int main() {
 			printf("\n");
 		}
 
-		for (int i = 0; i < 4; i++) {		// temptable¿¡ °ª ÀúÀå
+		for (int i = 0; i < 4; i++) {		// temptableì— ê°’ ì €ì¥
 			for (int j = 0; j < 4; j++) {
 				temptable[i][j] = table[i][j];
 			}
 		}
 
-		char control = 0;							// wasd Áß Á¶ÀÛ ¼±ÅÃ
+		char control = 0;							// wasd ì¤‘ ì¡°ì‘ ì„ íƒ
 		printf("\nPress (w/a/s/d) to move: ");
 
 		while (1) {
